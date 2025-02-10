@@ -4,15 +4,15 @@ import Link from "next/link";
 export default function Cuotas() {
   return (
     <div
-      className="fondo-pagina grid grid-rows-[20px_1fr_20px] justify-items-center min-h-screen px-4 pb-20 gap-16 font-[family-name:var(--font-geist-sans)]"
-      style={{ backgroundImage: "url('/fondo_social.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
+      className="fondo-pagina grid grid-rows-[20px_1fr_20px] justify-items-center min-h-screen px-4 pb-20 gap-4 font-[family-name:var(--font-geist-sans)]"
+      style={{ backgroundImage: "url('https://tisolercdn.nyc3.cdn.digitaloceanspaces.com/clubsocial/fondo_social.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
     >
       <main className="flex flex-col gap-8 row-start-2 items-center">
         <Image
           src="/escudo_social.svg"
           alt="Escudo Club Social"
-          width={150}
-          height={150}
+          width={120}
+          height={120}
           priority
         />
         <div className="flex flex-col items-center gap-6 bg-red-600 p-3 rounded">

@@ -12,24 +12,25 @@ const links = [
 export default function Home() {
   return (
     <div
-      className="fondo-pagina grid grid-rows-[20px_1fr_20px] justify-items-center min-h-screen px-4 pb-20 gap-16 font-[family-name:var(--font-geist-sans)]"
+      className="fondo-pagina grid grid-rows-[20px_0.95fr_20px] justify-items-center min-h-screen px-4 pb-20 gap-4 font-[family-name:var(--font-geist-sans)]"
       style={{ backgroundImage: "url('https://tisolercdn.nyc3.cdn.digitaloceanspaces.com/clubsocial/fondo_social.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
     >
-      <main className="flex flex-col gap-8 row-start-2 items-center">
+      <main className="flex flex-col ow-start-2 items-center">
         <Image
+          className="mt-8"
           src="/escudo_social.svg"
           alt="Escudo Club Social"
-          width={150}
-          height={150}
+          width={120}
+          height={120}
           priority
         />
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-10">
           {links.map((link, index) => (
             <Link
               key={index}
               href={link.href || '#'}
-              className="bg-red-600 text-white p-6 rounded-lg text-center hover:bg-blue-500 md:active:bg-red-600 active:bg-blue-500"
+              className="bg-red-600 text-white py-5 px-3 rounded-lg text-center hover:bg-blue-500 md:active:bg-red-600 active:bg-blue-500"
               rel="noopener noreferrer"
               target={link.href?.includes('https://') ? '_blank' : ''}
             >

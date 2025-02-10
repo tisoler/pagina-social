@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div
       className="fondo-pagina grid grid-rows-[20px_1fr_20px] justify-items-center min-h-screen px-4 pb-20 gap-16 font-[family-name:var(--font-geist-sans)]"
-      style={{ backgroundImage: "url('/fondo_social.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
+      style={{ backgroundImage: "url('https://tisolercdn.nyc3.cdn.digitaloceanspaces.com/clubsocial/fondo_social.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
     >
       <main className="flex flex-col gap-8 row-start-2 items-center">
         <Image

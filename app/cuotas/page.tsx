@@ -4,18 +4,19 @@ import Link from "next/link";
 export default function Cuotas() {
   return (
     <div
-      className="fondo-pagina grid grid-rows-[20px_1fr_20px] justify-items-center min-h-screen px-4 pb-20 gap-4 font-[family-name:var(--font-geist-sans)]"
+      className="fondo-pagina grid grid-rows-[20px_0.95fr_20px] justify-items-center min-h-screen px-4 pb-20 gap-4 font-[family-name:var(--font-geist-sans)]"
       style={{ backgroundImage: "url('https://tisolercdn.nyc3.cdn.digitaloceanspaces.com/clubsocial/fondo_social.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
     >
-      <main className="flex flex-col gap-8 row-start-2 items-center">
+      <main className="flex flex-col ow-start-2 items-center">
         <Image
+          className="mt-8"
           src="/escudo_social.svg"
           alt="Escudo Club Social"
           width={120}
           height={120}
           priority
         />
-        <div className="flex flex-col items-center gap-6 bg-red-600 p-3 rounded">
+        <div className="flex flex-col items-center gap-6 bg-red-600 p-3 rounded mt-10">
           <h1 className="text-2xl text-center">Por consultas sobre cuotas contactanos:</h1>
           <div className="flex items-center gap-3">
             <h2 className="text-lg">Sandra: 3460-694392</h2>
@@ -30,7 +31,7 @@ export default function Cuotas() {
             </a>
           </div>
         </div>
-        <Link className="p-4 font-bold rounded bg-blue-500 hover:bg-white hover:text-blue-500" href={'/'}>
+        <Link className="p-4 font-bold rounded bg-blue-500 hover:bg-white hover:text-blue-500 mt-10" href={'/'}>
           Volver
         </Link>
       </main>

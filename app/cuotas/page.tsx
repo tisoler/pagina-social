@@ -1,15 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const links = [
-  { text: "Quiero ser socio/a", href: "https://forms.gle/fsm1AcU1HZXCcpEYA" },
-  { text: "Cuotas sociales", href: "/cuotas", },
-  { text: "Pádel - Canchas disponibles", href: "https://docs.google.com/spreadsheets/d/1KTszTIHBF8oXamvIDhRncWm5IilGSbHHJt9jZZZSiBs" },
-  { text: "Pádel - Ranking damas", href: "https://comova.ar/2" },
-  { text: "Pádel - Ranking caballeros", href: "https://comova.ar/1" },
-];
-
-export default function Home() {
+export default function Cuotas() {
   return (
     <div
       className="fondo-pagina grid grid-rows-[20px_1fr_20px] justify-items-center min-h-screen px-4 pb-20 gap-16 font-[family-name:var(--font-geist-sans)]"
@@ -23,20 +15,24 @@ export default function Home() {
           height={150}
           priority
         />
-
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {links.map((link, index) => (
-            <Link
-              key={index}
-              href={link.href || '#'}
-              className="bg-red-600 text-white p-6 rounded-lg text-center hover:bg-blue-500 md:active:bg-red-600 active:bg-blue-500"
-              rel="noopener noreferrer"
-              target={link.href?.includes('https://') ? '_blank' : ''}
-            >
-              {link.text}
-            </Link>
-          ))}
+        <div className="flex flex-col items-center gap-6 bg-red-600 p-3 rounded">
+          <h1 className="text-2xl text-center">Por consultas sobre cuotas contactanos:</h1>
+          <div className="flex items-center gap-3">
+            <h2 className="text-lg">Sandra: 3460-694392</h2>
+            <a href={`https://wa.me/3460694392`} className='flex justify-center' target="_blank" rel="noopener noreferrer">
+              <Image width={40} height={40} className="object-cover" alt="WhatsApp" src={`/whatsapp.svg`} />
+            </a>
+          </div>
+          <div className="flex items-center gap-3">
+            <h2 className="text-lg">Lara: 341-3593619</h2>
+            <a href={`https://wa.me/3413593619`} className='flex justify-center' target="_blank" rel="noopener noreferrer">
+              <Image width={40} height={40} className="object-cover" alt="WhatsApp" src={`/whatsapp.svg`} />
+            </a>
+          </div>
         </div>
+        <Link className="p-4 font-bold rounded bg-blue-500 hover:bg-white hover:text-blue-500" href={'/'}>
+          Volver
+        </Link>
       </main>
       <footer className="row-start-3 flex gap-6 font-bold text-white md:text-blue-800 flex-wrap items-center justify-center">
         <a

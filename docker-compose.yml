@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+  web-social:
+    container_name: web-social
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3047:3047"
+    restart: unless-stopped
+    # Add healthcheck to ensure the application is running
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "http://localhost:3047"]
+      interval: 10s
+      timeout: 5s
+      retries: 3

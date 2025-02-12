@@ -1,72 +1,25 @@
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Cuotas() {
   return (
-    <div
-      className="fondo-pagina grid grid-rows-[20px_0.95fr_20px] justify-items-center min-h-screen px-4 pb-20 gap-4 font-[family-name:var(--font-geist-sans)]"
-      style={{ backgroundImage: "url('https://tisolercdn.nyc3.cdn.digitaloceanspaces.com/clubsocial/fondo_social.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
-    >
-      <main className="flex flex-col ow-start-2 items-center">
-        <Image
-          className="mt-8"
-          src="/escudo_social.svg"
-          alt="Escudo Club Social"
-          width={120}
-          height={120}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 bg-red-600 p-3 rounded mt-10">
-          <h1 className="text-2xl text-center">Por consultas sobre cuotas contactanos:</h1>
-          <div className="flex items-center gap-3">
-            <h2 className="text-lg">Sandra: 3460-694392</h2>
-            <a href={`https://wa.me/3460694392`} className='flex justify-center' target="_blank" rel="noopener noreferrer">
-              <Image width={40} height={40} className="object-cover" alt="WhatsApp" src={`/whatsapp.svg`} />
-            </a>
-          </div>
-          <div className="flex items-center gap-3">
-            <h2 className="text-lg">Lara: 341-3593619</h2>
-            <a href={`https://wa.me/3413593619`} className='flex justify-center' target="_blank" rel="noopener noreferrer">
-              <Image width={40} height={40} className="object-cover" alt="WhatsApp" src={`/whatsapp.svg`} />
-            </a>
-          </div>
+    <div className="flex flex-col items-center h-[50vh]">
+      <div className="flex flex-col items-center gap-6 bg-red-600 p-3 rounded mt-10">
+        <h1 className="text-xl text-center">Por consultas sobre cuotas contactanos:</h1>
+        <div className="bg-white w-full rounded-lg shadow-md px-4 py-2 flex justify-start items-center gap-4 hover:shadow-lg transition-shadow">
+          <h2 className="text-blue-700 font-semibold text-xl">Sandra</h2>
+          <a href={`https://wa.me/3460694392`} className='flex items-center justify-center w-full gap-2 pl-2 bg-green-500 py-3 text-white' target="_blank" rel="noopener noreferrer">
+            <Image width={30} height={30} className="object-cover" alt="WhatsApp" src={`/whatsapp-blanco.svg`} />
+            <p>3460-694392</p>
+          </a>
         </div>
-        <Link className="p-4 font-bold rounded bg-blue-500 hover:bg-white hover:text-blue-500 mt-10" href={'/'}>
-          Volver
-        </Link>
-      </main>
-      <footer className="row-start-3 flex gap-6 font-bold text-white md:text-blue-800 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://facebook.com/profile.php?id=100070215852582"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/icono-facebook.svg"
-            alt="Facebook"
-            width={30}
-            height={30}
-          />
-          Facebook
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://instagram.com/clubsocialdeportivo.mpaz/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/icono-instagram.svg"
-            alt="Instagram"
-            width={30}
-            height={30}
-          />
-          Instagram
-        </a>
-      </footer>
+        <div className="bg-white w-full rounded-lg shadow-md px-4 py-2 flex justify-start items-center gap-4 hover:shadow-lg transition-shadow">
+          <h2 className="text-blue-700 font-semibold text-xl">Lara</h2>
+          <a href={`https://wa.me/3413593619`} className='flex items-center justify-center w-full gap-2 pl-2 bg-green-500 py-3 text-white' target="_blank" rel="noopener noreferrer">
+            <Image width={30} height={30} className="object-cover" alt="WhatsApp" src={`/whatsapp-blanco.svg`} />
+            <p>341-3593619</p>
+          </a>
+        </div>
+      </div>
     </div>
   );
 }

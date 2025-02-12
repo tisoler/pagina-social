@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Cuotas() {
   return (
@@ -20,6 +21,9 @@ export default function Cuotas() {
           </a>
         </div>
       </div>
+      <Link className="hidden md:block p-4 w-2/3 text-center font-bold rounded bg-blue-500 hover:bg-white hover:text-blue-500 mt-10" href={'/'}>
+        Volver
+      </Link>
     </div>
   );
 }

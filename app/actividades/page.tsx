@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const ACTIVIDADES = [
   {
@@ -128,6 +129,9 @@ export default function Actividades() {
           </div>
         ))}
       </div>
+      <Link className="hidden md:block p-4 w-2/3 text-center font-bold rounded bg-blue-500 hover:bg-white hover:text-blue-500 mt-10" href={'/'}>
+        Volver
+      </Link>
     </>
   );
 }

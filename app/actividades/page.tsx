@@ -20,18 +20,10 @@ const ACTIVIDADES = [
   },
   {
     icono: "/pelota_voley.svg",
-    actividad: "Vóley masculino",
-    profe: "Prof. Mariano González",
-    contacto: "",
-    contactoMostra: "",
-    instagram: "voleyclubsocialmpaz"
-  },
-  {
-    icono: "/pelota_voley.svg",
     actividad: "Maxi voley",
-    profe: "Prof. Mariano González",
-    contacto: "",
-    contactoMostra: "",
+    profe: "Prof. Natalia Rattaro",
+    contacto: "3460697964",
+    contactoMostra: "3460-697964",
     instagram: "voleyclubsocialmpaz"
   },
   {
@@ -45,9 +37,9 @@ const ACTIVIDADES = [
   {
     icono: "/patin.svg",
     actividad: "Patín artístico",
-    profe: "Prof. Daniela Amichetti",
-    contacto: "3465407375",
-    contactoMostra: "3465-407375",
+    profe: "Prof. Juan Pablo López / Noe Reynoso",
+    contacto: "3584128570",
+    contactoMostra: "358-4128570 / 341-3229273",
     instagram: "patinartistico.socialpaz"
   },
   {
@@ -56,14 +48,6 @@ const ACTIVIDADES = [
     profe: "Prof. Pablo Torres",
     contacto: "3460692328",
     contactoMostra: "3460-692328",
-    instagram: "padel.mpaz"
-  },
-  {
-    icono: "/pelota_padel.svg",
-    actividad: "Pádel",
-    profe: "Prof. Ramiro Pellicioni",
-    contacto: "3464448868",
-    contactoMostra: "3464-448868",
     instagram: "padel.mpaz"
   },
   {
@@ -99,7 +83,7 @@ export default function Actividades() {
               <div className="text-gray-600 flex flex-col gap-1">
                 {
                   item.contacto && (
-                    <a href={`https://wa.me/${item.contacto}`} className='flex items-center justify-center gap-2 bg-green-500 py-2 text-white' target="_blank" rel="noopener noreferrer">
+                    <a href={`https://wa.me/${item.contacto}`} className='flex items-center justify-center gap-2 bg-green-500 py-2 px-2 text-white' target="_blank" rel="noopener noreferrer">
                       <Image width={30} height={30} className="object-cover" alt="WhatsApp" src={`/whatsapp-blanco.svg`} />
                       <p>{item.contactoMostra}</p>
                     </a>

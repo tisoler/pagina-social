@@ -4,19 +4,27 @@ import Link from "next/link";
 const ACTIVIDADES = [
   {
     icono: "/pelota_voley.svg",
-    actividad: "Mini voley",
-    profe: "Prof. Débora Cuellar",
-    contacto: "3460695902",
-    contactoMostra: "3460-695902",
+    actividad: "Mini vóley",
+    profe: "Prof. Victoria	Fabre",
+    contacto: "3460690531",
+    contactoMostra: "3460-690531",
     instagram: "minivoley.social"
   },
   {
     icono: "/pelota_voley.svg",
-    actividad: "Voley juvenil femenino",
+    actividad: "Vóley juvenil femenino",
     profe: "Prof. Vanesa Durand",
     contacto: "3460690531",
     contactoMostra: "3460-690531",
     instagram: "clubsocial_juveniles"
+  },
+  {
+    icono: "/pelota_voley.svg",
+    actividad: "Vóley masculino",
+    profe: "Prof. Mariano González",
+    contacto: "",
+    contactoMostra: "",
+    instagram: "voleyclubsocialmpaz"
   },
   {
     icono: "/pelota_voley.svg",
@@ -64,14 +72,6 @@ const ACTIVIDADES = [
     profe: "Prof. Paloma López",
     contacto: "3460694586",
     contactoMostra: "3460-694586",
-    instagram: ""
-  },
-  {
-    icono: "/cama_elastica.svg",
-    actividad: "Jumping/GAP",
-    profe: "Prof. Lorna Tessaro",
-    contacto: "3364004379",
-    contactoMostra: "3364-004379",
     instagram: ""
   },
 ];

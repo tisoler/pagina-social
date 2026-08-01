@@ -5,14 +5,12 @@ const links = [
   { text: "Cuotas sociales", href: "/cuotas", },
   { text: "Actividades", href: "/actividades", },
   { text: "Pádel - Canchas disponibles", href: "https://docs.google.com/spreadsheets/d/1KTszTIHBF8oXamvIDhRncWm5IilGSbHHJt9jZZZSiBs" },
-  { text: "Pádel - Ranking damas", href: "https://comova.ar/2" },
-  { text: "Pádel - Ranking caballeros", href: "https://comova.ar/1" },
 ];
 
 export default function Home() {
   return (
     <div className="h-[50vh] flex items-center">
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 gap-4">
         {links.map((link, index) => (
           <Link
             key={index}

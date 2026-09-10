@@ -2,36 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    @apply bg-surface text-neutral-800 font-sans antialiased;
+  }
+
+  ::selection {
+    @apply bg-brand-red text-white;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-brand-red px-5 py-3 font-semibold text-white transition hover:bg-brand-dark;
+  }
 
-.fondo-pagina::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(255, 255, 255, 0.25); /* Adjust the opacity as needed */
-  z-index: 1;
-}
+  .btn-outline-light {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-white/70 px-5 py-3 font-semibold text-white transition hover:bg-white hover:text-brand-red;
+  }
 
-main, footer {
-  position: relative;
-  z-index: 2;
+  .section-kicker {
+    @apply font-display text-sm font-semibold uppercase tracking-[0.3em] text-brand-red;
+  }
+
+  .section-title {
+    @apply font-display text-3xl font-bold uppercase tracking-wide text-brand-navy sm:text-4xl;
+  }
 }

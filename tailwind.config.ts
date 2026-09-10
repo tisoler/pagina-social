@@ -2,15 +2,23 @@ import type { Config } from "tailwindcss";
 
 export default {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        brand: {
+          red: "#D9232E",
+          dark: "#A81323",
+          navy: "#0B1F3F",
+        },
+        surface: "#F6F6F7",
+      },
+      fontFamily: {
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        display: ["var(--font-barlow)", "var(--font-inter)", "sans-serif"],
+        hand: ["var(--font-hand)", "cursive"],
       },
     },
   },

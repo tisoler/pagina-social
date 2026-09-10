@@ -3,15 +3,15 @@ FROM node:23-alpine AS builder
 
 WORKDIR /web-social
 
-RUN apk add --no-cache yarn
+RUN corepack enable
 
 # Install dependencies for building
-COPY package*.json yarn.lock ./
-RUN yarn install --frozen-lockfile
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install --frozen-lockfile
 
 # Copy source and build
 COPY . .
-RUN yarn build
+RUN pnpm build
 
 # Stage 2: Run the built code
 FROM node:23-alpine AS runner
@@ -27,7 +27,6 @@ RUN adduser --system --uid 1001 nextjs
 # Copy necessary files
 COPY --from=builder /web-social/public ./public
 COPY --from=builder /web-social/package.json ./package.json
-COPY --from=builder /web-social/yarn.lock ./yarn.lock
 
 # Copy built assets
 COPY --from=builder --chown=nextjs:nodejs /web-social/.next/standalone ./
